@@ -1,20 +1,52 @@
 :root {
-  --light: #f4f6ff;
-  --yellow: #fbd46d;
-  --green: #4f8a8b;
-  --dark: #07031a;
+  --light: 244, 246, 255;
+  --yellow: 251, 212, 109;
+  --green: 79, 138, 139;
+  --dark: 7, 3, 26;
   --background: var(--light);
+  --border: var(--dark);
   --color: var(--dark);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: var(--background);
-  color: var(--color);
+  background-color: rgb(var(--background));
+  color: rgb(var(--color));
+  font-family: sans-serif;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--dark);
+    --border: var(--light);
     --color: var(--light);
   }
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  border-bottom: .0625rem solid rgba(var(--border), .1);
+  padding: 1rem 0;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.header__nav {
+  margin-left: auto;
 }
