@@ -1,0 +1,20 @@
+:root {
+  --light: #f4f6ff;
+  --yellow: #fbd46d;
+  --green: #4f8a8b;
+  --dark: #07031a;
+  --background: var(--light);
+  --color: var(--dark);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark);
+    --color: var(--light);
+  }
+}
