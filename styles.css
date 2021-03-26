@@ -15,7 +15,7 @@
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--color));
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
 }
 
