@@ -1,8 +1,8 @@
 :root {
-  --light: 244, 246, 255;
-  --yellow: 251, 212, 109;
-  --green: 79, 138, 139;
-  --dark: 7, 3, 26;
+  --light: 236, 236, 236; /* #ECECEC */
+  --orange: 242, 163, 101; /* #F2A365 */
+  --blue: 48, 71, 94; /* #30475E */
+  --dark: 34, 40, 49; /* #222831 */
   --background: var(--light);
   --border: var(--dark);
   --color: var(--dark);
