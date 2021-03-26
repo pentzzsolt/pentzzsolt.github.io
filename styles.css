@@ -34,7 +34,9 @@ body {
 }
 
 .header {
+  background-color: rgb(var(--dark));
   border-bottom: .0625rem solid rgba(var(--border), .1);
+  color: rgb(var(--light));
   padding: 1rem 0;
 }
 
@@ -49,4 +51,8 @@ body {
 
 .header__nav {
   margin-left: auto;
+}
+
+.header__link {
+  color: currentColor;
 }
