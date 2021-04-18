@@ -61,3 +61,68 @@ h1, h2, h3, h4, h5, h6 {
 .header__link {
   color: currentColor;
 }
+
+.intro {
+  column-gap: 2rem;
+  margin: 4rem 0;
+}
+
+.intro__title, .intro__lead {
+  margin: 0;
+  text-align: center;
+}
+
+.intro__title {
+  grid-area: title;
+}
+
+.intro__lead {
+  grid-area: lead;
+  margin-bottom: 1rem;
+}
+
+.intro__text {
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: .0625rem solid rgb(var(--border));
+  grid-area: text;
+  margin: 0;
+}
+
+.intro__text p {
+  margin: 0 0 .75em;
+}
+
+@media screen and (min-width: 40em) {
+  .intro {
+    display: grid;
+    grid-template-areas:
+      "title title title title title title"
+      "lead lead lead lead lead lead"
+      ". text text text text .";
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .intro {
+    grid-template-areas:
+      "title title . . . ."
+      "lead lead text text text text"
+      ". . text text text text";
+  }
+
+  .intro__title, .intro__lead {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .intro {
+    grid-template-areas:
+      ". title title . . . . ."
+      ". lead lead text text text text ."
+      ". . . text text text text .";
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
