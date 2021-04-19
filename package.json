@@ -3,6 +3,9 @@
   "bugs": {
     "url": "https://github.com/pentzzsolt/pentzzsolt.github.io/issues"
   },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
   "homepage": "https://github.com/pentzzsolt/pentzzsolt.github.io#readme",
   "name": "pentzzsolt.github.io",
   "private": true,
