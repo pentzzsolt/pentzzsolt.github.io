@@ -1,0 +1,14 @@
+{
+  "author": "pentzzsolt@gmail.com",
+  "bugs": {
+    "url": "https://github.com/pentzzsolt/pentzzsolt.github.io/issues"
+  },
+  "homepage": "https://github.com/pentzzsolt/pentzzsolt.github.io#readme",
+  "name": "pentzzsolt.github.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pentzzsolt/pentzzsolt.github.io.git"
+  },
+  "version": "1.0.0"
+}
