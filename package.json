@@ -14,7 +14,8 @@
     "url": "git+https://github.com/pentzzsolt/pentzzsolt.github.io.git"
   },
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
   "version": "1.0.0"
 }
