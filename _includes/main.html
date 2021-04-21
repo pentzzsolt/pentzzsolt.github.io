@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}—Zsolt Pentz</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Zsolt Pentz">
+    <meta name="description" content="{{ description }}">
+    <meta name="theme-color" content="#3a3c40">
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__container">
+          <h1 class="header__title">
+            <a class="header__link" href="/">Zsolt Pentz</a>
+          </h1>
+          <nav class="header__nav">
+            <a class="header__link" href="/work/">Work</a>
+            <a class="header__link" href="/drumming/">Drumming</a>
+            <a class="header__link" href="/writing/">Writing</a>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <main class="container">
+      {{ content }}
+    </main>
+  </body>
+</html>
