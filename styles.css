@@ -18,12 +18,12 @@
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--color));
-  font-family: 'PT Serif', serif;
+  font-family: serif;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Poppins, sans-serif;
+  font-family: sans-serif;
 }
 
 p {
