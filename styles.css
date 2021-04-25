@@ -129,11 +129,21 @@ p {
 }
 
 @media screen and (min-width: 80em) {
+  html {
+    font-size: 1.125rem;
+  }
+
   .intro {
     grid-template-areas:
       ". title title . . . . ."
       ". lead lead text text text text ."
       ". . . text text text text .";
     grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 1.25rem;
   }
 }
