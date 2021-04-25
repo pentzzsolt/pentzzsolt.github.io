@@ -9,6 +9,7 @@
   --background: var(--white);
   --border: var(--gainsboro);
   --color: var(--raisinBlack);
+  --focus: var(--internationalOrangeEngineering);
 }
 
 *, *::before, *::after {
@@ -36,6 +37,7 @@ p {
     --background: var(--raisinBlack);
     --border: var(--onyx);
     --color: var(--cultured);
+    --focus: var(--congoPink);
   }
 }
 
@@ -50,21 +52,24 @@ p {
   padding: 1rem 0;
 }
 
-.header__container {
-  display: flex;
-}
-
-.header__title {
-  font-size: 1rem;
+.header__list {
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.header__nav {
-  margin-left: auto;
+.header__item {
+  display: inline;
+  margin: 0 .5rem;
 }
 
 .header__link {
   color: currentColor;
+  font-size: 1.125rem;
+}
+
+.header__link:focus {
+  color: rgba(var(--focus));
 }
 
 .intro {
