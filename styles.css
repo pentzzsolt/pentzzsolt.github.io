@@ -10,6 +10,7 @@
   --border: var(--gainsboro);
   --color: var(--raisinBlack);
   --focus: var(--internationalOrangeEngineering);
+  --footer: var(--onyx);
 }
 
 *, *::before, *::after {
@@ -19,8 +20,11 @@
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--color));
+  display: flex;
+  flex-direction: column;
   font-family: serif;
   margin: 0;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,7 +42,12 @@ p {
     --border: var(--onyx);
     --color: var(--cultured);
     --focus: var(--congoPink);
+    --footer: var(--gainsboro);
   }
+}
+
+.main {
+  flex: 1;
 }
 
 .container {
@@ -47,9 +56,13 @@ p {
   padding: 0 1rem;
 }
 
-.header {
-  border-bottom: .0625rem solid rgb(var(--border));
+.header, .footer {
+  border: solid rgb(var(--border));
   padding: 1rem 0;
+}
+
+.header {
+  border-width: 0 0 .0625rem;
 }
 
 .header__list {
@@ -102,6 +115,42 @@ p {
 
 .intro__text p {
   margin: 0 0 .75em;
+}
+
+.footer {
+  border-width: .0625rem 0 0;
+  color: rgb(var(--footer));
+  font-size: .875rem;
+  text-align: center;
+}
+
+.footer__label {
+  font: italic 1em serif;
+  margin: 0 0 .25rem;
+}
+
+.footer__list {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  display: inline;
+  list-style-type: none;
+  margin: 0 .125rem;
+}
+
+.footer__link {
+  color: currentColor;
+}
+
+.footer__link:hover {
+  text-decoration-color: rgba(var(--focus));
+}
+
+.footer__link:focus {
+  color: rgba(var(--focus));
 }
 
 @media screen and (min-width: 40em) {

@@ -11,21 +11,39 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <nav>
-          <ul class="header__list">
-            {%- for item in collections.menuitem -%}
-              <li{% if page.url == item.url %} aria-current="page"{% endif %} class="header__item">
-                <a class="header__link" href="{{ item.url }}">{{ item.data.title }}</a>
+    <header>
+      <div class="container">
+        <div class="header">
+          <nav>
+            <ul class="header__list">
+              {%- for item in collections.menuitem -%}
+                <li{% if page.url == item.url %} aria-current="page"{% endif %} class="header__item">
+                  <a class="header__link" href="{{ item.url }}">{{ item.data.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <nav aria-labelledby="footer-label" class="footer">
+          <h2 class="footer__label" id="footer-label">Social media links</h2>
+          <ul class="footer__list">
+            {%- for item in footer -%}
+              <li class="footer__item">
+                <a class="footer__link" href="{{ item.url }}">{{ item.name }}</a>
               </li>
             {%- endfor -%}
           </ul>
         </nav>
-      </header>
-    </div>
-    <main class="container">
-      {{ content }}
-    </main>
+      </div>
+    </footer>
   </body>
 </html>
