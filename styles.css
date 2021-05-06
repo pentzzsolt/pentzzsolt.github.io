@@ -6,7 +6,7 @@
   --white: 255, 255, 255; /* #ffffff */
   --congoPink: 238, 142, 129; /* #ee8e81 */
   --internationalOrangeEngineering: 180, 43, 24; /* #b42b18 */
-  --background: var(--white);
+  --background: var(--cultured);
   --border: var(--gainsboro);
   --color: var(--raisinBlack);
   --focus: var(--internationalOrangeEngineering);
@@ -17,8 +17,11 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   background-color: rgb(var(--background));
+}
+
+body {
   color: rgb(var(--color));
   display: flex;
   flex-direction: column;
