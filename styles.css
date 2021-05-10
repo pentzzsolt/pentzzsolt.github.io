@@ -156,6 +156,18 @@ p {
   color: rgba(var(--focus));
 }
 
+.work {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.work__lead {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-inline: auto;
+  max-width: 60ch;
+}
+
 @media screen and (min-width: 40em) {
   .intro {
     display: grid;
@@ -164,6 +176,10 @@ p {
       "lead lead lead lead lead lead"
       ". text text text text .";
     grid-template-columns: repeat(6, 1fr);
+  }
+  .work__lead {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
   }
 }
 
