@@ -168,6 +168,33 @@ p {
   max-width: 60ch;
 }
 
+.work__list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.work__item {
+  list-style-type: none;
+  width: 25%;
+}
+
+.work__link {
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  background-color: rgb(var(--onyx));
+  color: rgb(var(--white));
+  display: flex;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-variant: all-petite-caps;
+  justify-content: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 40em) {
   .intro {
     display: grid;
