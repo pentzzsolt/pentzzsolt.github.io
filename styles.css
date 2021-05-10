@@ -39,6 +39,10 @@ p {
   line-height: 1.5;
 }
 
+strong {
+  text-decoration: underline .075em wavy rgb(var(--focus));
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--raisinBlack);
