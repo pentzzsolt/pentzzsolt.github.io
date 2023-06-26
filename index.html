@@ -8,6 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@200;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --color-seasalt: #fafafc;
+      --color-eerie-black: #1f1f1f;
+      --color-night: #0a0a0a;
+      --color-engineering-orange: #b42b18;
+    }
     body {
       font-family: 'PT Serif', serif;
     }
@@ -17,6 +23,8 @@
     }
     @media screen {
       body {
+        background: var(--color-seasalt);
+        color: var(--color-night);
         margin: 0 auto;
         max-width: 36rem;
         padding-inline: .5rem;
@@ -31,6 +39,12 @@
     @media screen and (min-width: 40rem) {
       body {
         padding-block-start: 4rem;
+      }
+    }
+    @media screen and (prefers-color-scheme: dark) {
+      body {
+        background: var(--color-eerie-black);
+        color: var(--color-seasalt);
       }
     }
   </style>
