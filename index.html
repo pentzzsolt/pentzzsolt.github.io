@@ -59,15 +59,25 @@
         font-weight: 700;
       }
       .cta {
+        --shadow-position: .25em;
         background: var(--color-engineering-orange);
         border: .25em ridge var(--color-engineering-orange);
-        box-shadow: .25em .25em .0625em var(--color-shadow);
+        box-shadow: var(--shadow-position) var(--shadow-position) .0625em var(--color-shadow);
         color: var(--color-seasalt);
         display: inline-block;
         font: 600 1.0625rem var(--font-sans-serif);
         margin-block: 1.25em;
         padding: 1em;
         text-decoration: none;
+        transition: all .035s linear;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .cta:active {
+        --shadow-position: .125em;
+        left: .125em;
+        top: .125em;
       }
     }
     @media screen and (min-width: 40rem) {
