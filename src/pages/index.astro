@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Website of Zsolt Pentz">
   <main>
-    <Picture alt="A portrait of Zsolt Pentz." densities={[1.5, 2]} pictureAttributes={{ class: 'portrait' }} role="presentation" src={myImage} width="160" />
+    <Picture alt="A portrait of Zsolt Pentz." densities={[1.5, 2]} pictureAttributes={{ 'aria-hidden': true, class: 'portrait' }} src={myImage} width="160" />
     <p class="greeting">Hi, I'm <span class="name" lang="hu">Zsolt</span> (pronounced <a href="https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative" hreflang="en" referrerpolicy="no-referrer">Ʒ</a>olt).</p>
     <p class="hero">I build digital experiences <br>on the web.</p>
     <p class="introduction">I am a product-minded user interface engineer with an attention to detail, ready to go the extra mile to deliver a sublime user experience. I am also a son, a boyfriend, a drummer, an animal lover, and a university student.</p>
