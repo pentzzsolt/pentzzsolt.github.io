@@ -1,0 +1,43 @@
+---
+import childProcess from 'child_process';
+
+const hash = childProcess.execSync("git rev-parse --short HEAD").toString().trim();
+---
+<footer>
+  <nav>
+    <a href="https://www.linkedin.com/in/pentzzsolt/" hreflang="en" referrerpolicy="no-referrer">LinkedIn</a>
+    <a href="https://github.com/pentzzsolt" hreflang="en" referrerpolicy="no-referrer">GitHub</a>
+  </nav>
+  <aside>
+    <ul>
+      <li>Built with {Astro.generator}</li>
+      <li>{hash}</li>
+      <li>Hosted on GitHub Pages</li>
+    </ul>
+  </aside>
+</footer>
+
+<style>
+  ul {
+    display: inline-flex;
+    font-size: .75rem;
+    list-style-type: none;
+    margin: .25rem 0 0;
+    padding: 0;
+  }
+  li + li {
+    border-inline-start: .0625rem solid currentColor;
+    margin-inline-start: .5rem;
+    padding-inline-start: .5rem;
+  }
+  @media screen {
+    footer {
+      text-align: center;
+    }
+  }
+  @media print {
+    aside {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import { Picture } from 'astro:assets';
+import myImage from '../assets/portrait.jpg';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Website of Zsolt Pentz">
+  <main>
+    <Picture alt="A portrait of Zsolt Pentz." densities={[1.5, 2]} pictureAttributes={{ class: 'portrait' }} role="presentation" src={myImage} width="160" />
+    <p class="greeting">Hi, I'm <span class="name" lang="hu">Zsolt</span> (pronounced <a href="https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative" hreflang="en" referrerpolicy="no-referrer">Ʒ</a>olt).</p>
+    <p class="hero">I build digital experiences <br>on the web.</p>
+    <p class="introduction">I am a product-minded user interface engineer with an attention to detail, ready to go the extra mile to deliver a sublime user experience. I am also a son, a boyfriend, a drummer, an animal lover, and a university student.</p>
+    <a class="callToAction" href="https://www.linkedin.com/in/pentzzsolt/" hreflang="en" referrerpolicy="no-referrer">
+      Send Zsolt a message
+    </a>
+  </main>
+</Layout>
+
+<style>
+  .portrait img {
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  .callToAction {
+    --shadow-position: .25em;
+    background: var(--color-engineering-orange);
+    border: .25em ridge var(--color-engineering-orange);
+    box-shadow: var(--shadow-position) var(--shadow-position) .0625em var(--color-shadow);
+    color: var(--color-seasalt);
+    display: inline-block;
+    font: 600 1.0625rem var(--font-sans-serif);
+    padding: 1em;
+    text-decoration: none;
+    transition: all .035s linear;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .callToAction:active {
+    --shadow-position: .125em;
+    left: .125em;
+    top: .125em;
+  }
+  @media screen {
+    main {
+      margin: 0 auto;
+      max-width: 64rem;
+      padding-block: 3rem;
+      text-align: center;
+    }
+    .hero {
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.125;
+      margin: .375em 0;
+    }
+    .greeting {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    .introduction {
+      font-size: 1.25rem;
+      margin: 0 auto 3rem;
+      max-width: 64ch;
+    }
+  }
+  @media print {
+    br {
+      display: none;
+    }
+    .portrait {
+      display: none;
+    }
+    .callToAction {
+      display: none;
+    }
+  }
+</style>

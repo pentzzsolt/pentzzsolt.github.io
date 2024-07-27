@@ -1,0 +1,84 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource/poppins';
+import '@fontsource/pt-serif';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+type Props = {
+  title: string
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-seasalt: #fafafc;
+    --color-dim-gray: #707070;
+    --color-eerie-black: #1f1f1f;
+    --color-night: #0a0a0a;
+    --color-salmon: #eb7e6f;
+    --color-engineering-orange: #b42b18;
+    --font-serif: 'PT Serif', serif;
+    --font-sans-serif: Poppins, sans-serif;
+    --color-background: var(--color-seasalt);
+    --color-text: var(--color-night);
+    --color-link: var(--color-engineering-orange);
+    --color-shadow: var(--color-dim-gray);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: var(--color-eerie-black);
+      --color-text: var(--color-seasalt);
+      --color-link: var(--color-salmon);
+      --color-shadow: var(--color-night);
+    }
+  }
+  html {
+    font-family: var(--font-serif);
+  }
+  @media screen {
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      background: var(--color-background);
+      color: var(--color-text);
+    }
+    body {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      margin: 0;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    a {
+      color: var(--color-link);
+    }
+
+  }
+  @media print {
+    a::after {
+      content: ' ['attr(href)']';
+      font-size: .75em;
+    }
+  }
+</style>
