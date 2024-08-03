@@ -1,6 +1,7 @@
 ---
 import { Picture } from 'astro:assets';
 import myImage from '../assets/portrait.jpg';
+import LinkButton from '../components/LinkButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -10,9 +11,9 @@ import Layout from '../layouts/Layout.astro';
     <p class="greeting">Hi, I'm <span class="name" lang="hu">Zsolt</span> (pronounced <a href="https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative" hreflang="en" referrerpolicy="no-referrer">Ʒ</a>olt).</p>
     <p class="hero">I build digital experiences <br>on the web.</p>
     <p class="introduction">I am a product-minded user interface engineer with an attention to detail, ready to go the extra mile to deliver a sublime user experience. I am also a son, a boyfriend, a drummer, an animal lover, and a university student.</p>
-    <a class="callToAction" href="https://www.linkedin.com/in/pentzzsolt/" hreflang="en" referrerpolicy="no-referrer">
+    <LinkButton class="callToAction" href="https://www.linkedin.com/in/pentzzsolt/" hreflang="en" referrerpolicy="no-referrer" size="lg">
       Send Zsolt a message
-    </a>
+    </LinkButton>
   </main>
 </Layout>
 
@@ -21,26 +22,6 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 100%;
     display: block;
     margin: 0 auto 1rem;
-  }
-  .callToAction {
-    --shadow-position: .25em;
-    background: var(--color-engineering-orange);
-    border: .25em ridge var(--color-engineering-orange);
-    box-shadow: var(--shadow-position) var(--shadow-position) .0625em var(--color-shadow);
-    color: var(--color-seasalt);
-    display: inline-block;
-    font: 600 1.0625rem var(--font-sans-serif);
-    padding: 1em;
-    text-decoration: none;
-    transition: all .035s linear;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .callToAction:active {
-    --shadow-position: .125em;
-    left: .125em;
-    top: .125em;
   }
   @media screen {
     main {

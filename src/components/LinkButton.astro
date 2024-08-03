@@ -1,0 +1,60 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<"a"> & {
+  size?: "sm" | "md" | "lg"
+};
+
+const { size = "md", class: className, ...attributes } = Astro.props;
+
+const classList = [
+  className,
+  {
+    "size-sm": size == "sm",
+    "size-md": size == "md",
+    "size-lg": size == "lg"
+  }
+]
+---
+<a class:list={classList} {...attributes}>
+  <slot />
+</a>
+  
+<style>
+  a {
+    --shadow-blur: .125rem;
+    --shadow-position: .25em;
+    background: var(--color-engineering-orange);
+    border: .25em ridge var(--color-engineering-orange);
+    box-shadow: var(--shadow-position) var(--shadow-position) var(--shadow-blur) var(--color-shadow);
+    color: var(--color-seasalt);
+    display: inline-block;
+    font-family: var(--font-sans-serif);
+    font-size: var(--font-size);
+    line-height: 1;
+    padding: var(--padding);
+    text-decoration: none;
+    transition: all .035s linear;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  a:active {
+    --shadow-blur: .0625rem;
+    --shadow-position: .125em;
+    left: .125em;
+    top: .125em;
+  }
+  a.size-sm {
+    --font-size: .875rem;
+    --padding: .625em .875em;
+  }
+  a.size-md {
+    --font-size: 1rem;
+    --padding: .875em 1.125em;
+  }
+  a.size-lg {
+    --font-size: 1.125rem;
+    --padding: 1.125em 1.75em;
+  }
+</style>
