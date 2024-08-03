@@ -66,7 +66,8 @@ const { title } = Astro.props;
     body {
       display: grid;
       grid-template-rows: auto 1fr auto;
-      margin: 0;
+      margin: 0 auto;
+      max-width: 90rem;
       min-height: 100vh;
       padding: 1rem;
     }
@@ -77,6 +78,16 @@ const { title } = Astro.props;
   @media screen and (min-width: 40rem) {
     body {
       padding: 2rem;
+    }
+  }
+  @media screen and (min-width: 90rem) {
+    html {
+      font-size: 1.125rem;
+    }
+  }
+  @media screen and (min-width: 120rem) {
+    html {
+      font-size: 1.25rem;
     }
   }
   @media print {
