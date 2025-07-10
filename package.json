@@ -9,13 +9,16 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.0.14",
-    "@fontsource/pt-serif": "^5.0.21"
+    "@fontsource/poppins": "^5.2.6",
+    "@fontsource/pt-serif": "^5.2.6"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.8.3",
-    "@types/node": "^20.14.12",
-    "astro": "^4.12.2",
-    "typescript": "^5.5.4"
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.16.2",
+    "astro": "^5.11.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22.16.0"
   }
 }
